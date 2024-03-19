@@ -1,125 +1,156 @@
-<div class="container-fluid py-3 d-flex flex-row overflow-x-auto">
-  <div class="container-fluid">
-    <h3>Most Liked Products</h3>
+<div class="container-fluid outer-container">
+  <div class="container-fluid p-0">
+    <h3>MOST LIKED PRODUCTS</h3>
   </div>
-  <div class="card" style="width: 18rem">
-    <img src="assets/Images/flower1.jpg" class="card-img-top" alt="Not Found" />
-    <div class="card-body">
-      <h5 class="card-title">Flower Bouquet</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
+
+  <div class="container-fluid p-0 d-flex flex-row">
+    <button class="btn border-0" (click)="handleLeftClick()">
+      <i class="bi bi-arrow-left-circle"></i>
+    </button>
+
+    <div
+      class="container-fluid p-0 py-3 d-flex flex-row overflow-x-hidden product-container"
+    >
+      <div class="card" style="width: 18rem">
+        <img
+          src="assets/Images/flower1.jpg"
+          class="card-img-top"
+          alt="Not Found"
+        />
+        <div class="card-body">
+          <h5 class="card-title fs-6 fw-bold">Flower Bouquet</h5>
+          <p class="card-text fw-bold">{{ "10.50" | currency : "INR" }}</p>
+        </div>
+        <div class="card-body">
+          <a href="#" class="card-link"><i class="bi bi-cart"></i></a>
+          <a href="#" class="card-link float-end"
+            ><i class="bi bi-heart"></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="assets/Images/jacket.jpg"
+          class="card-img-top"
+          alt="Not Found"
+        />
+        <div class="card-body">
+          <h5 class="card-title fs-6 fw-bold">Winter Jacket</h5>
+          <p class="card-text fw-bold">{{ "250" | currency : "INR" }}</p>
+        </div>
+        <div class="card-body">
+          <a href="#" class="card-link"><i class="bi bi-cart"></i></a>
+          <a href="#" class="card-link float-end"
+            ><i class="bi bi-heart"></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="assets/Images/mercedez.png"
+          class="card-img-top"
+          alt="Not Found"
+        />
+        <div class="card-body">
+          <h5 class="card-title fs-6 fw-bold">Mercedes Benz</h5>
+          <p class="card-text fw-bold">{{ "100" | currency : "INR" }}</p>
+        </div>
+        <div class="card-body">
+          <a href="#" class="card-link"><i class="bi bi-cart"></i></a>
+          <a href="#" class="card-link float-end"
+            ><i class="bi bi-heart"></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="assets/Images/smart watch.png"
+          class="card-img-top"
+          alt="Not Found"
+        />
+        <div class="card-body">
+          <h5 class="card-title fs-6 fw-bold">Smart Watch</h5>
+          <p class="card-text fw-bold">{{ "2500" | currency : "INR" }}</p>
+        </div>
+        <div class="card-body">
+          <a href="#" class="card-link"><i class="bi bi-cart"></i></a>
+          <a href="#" class="card-link float-end"
+            ><i class="bi bi-heart"></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="assets/Images/flower1.jpg"
+          class="card-img-top"
+          alt="Not Found"
+        />
+        <div class="card-body">
+          <h5 class="card-title fs-6 fw-bold">Flower Bouquet</h5>
+          <p class="card-text fw-bold">{{ "10.50" | currency : "INR" }}</p>
+        </div>
+        <div class="card-body">
+          <a href="#" class="card-link"><i class="bi bi-cart"></i></a>
+          <a href="#" class="card-link float-end"
+            ><i class="bi bi-heart"></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="assets/Images/flower1.jpg"
+          class="card-img-top"
+          alt="Not Found"
+        />
+        <div class="card-body">
+          <h5 class="card-title fs-6 fw-bold">Card title</h5>
+          <p class="card-text fw-bold">{{ "10.50" | currency : "INR" }}</p>
+        </div>
+        <div class="card-body">
+          <a href="#" class="card-link"><i class="bi bi-cart"></i></a>
+          <a href="#" class="card-link float-end"
+            ><i class="bi bi-heart"></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="assets/Images/flower1.jpg"
+          class="card-img-top"
+          alt="Not Found"
+        />
+        <div class="card-body">
+          <h5 class="card-title fs-6 fw-bold">Card title</h5>
+          <p class="card-text fw-bold">{{ "10.50" | currency : "INR" }}</p>
+        </div>
+        <div class="card-body">
+          <a href="#" class="card-link"><i class="bi bi-cart"></i></a>
+          <a href="#" class="card-link float-end"
+            ><i class="bi bi-heart"></i
+          ></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img
+          src="assets/Images/flower1.jpg"
+          class="card-img-top"
+          alt="Not Found"
+        />
+        <div class="card-body">
+          <h5 class="card-title fs-6">Card title</h5>
+          <p class="card-text fw-bold">{{ "10.50" | currency : "INR" }}</p>
+        </div>
+        <div class="card-body">
+          <a href="#" class="card-link"><i class="bi bi-cart"></i></a>
+          <a href="#" class="card-link float-end"
+            ><i class="bi bi-heart"></i
+          ></a>
+        </div>
+      </div>
     </div>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem">
-    <img src="assets/Images/jacket.jpg" class="card-img-top" alt="Not Found" />
-    <div class="card-body">
-      <h5 class="card-title">Winter Jacket</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-    </div>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem">
-    <img
-      src="assets/Images/mercedez.png"
-      class="card-img-top"
-      alt="Not Found"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Mercedes Benz</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-    </div>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem">
-    <img
-      src="assets/Images/smart watch.png"
-      class="card-img-top"
-      alt="Not Found"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Smart Watch</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-    </div>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem">
-    <img src="assets/Images/flower1.jpg" class="card-img-top" alt="Not Found" />
-    <div class="card-body">
-      <h5 class="card-title">Flower Bouquet</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-    </div>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem">
-    <img src="assets/Images/flower1.jpg" class="card-img-top" alt="Not Found" />
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-    </div>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem">
-    <img src="assets/Images/flower1.jpg" class="card-img-top" alt="Not Found" />
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-    </div>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem">
-    <img src="assets/Images/flower1.jpg" class="card-img-top" alt="Not Found" />
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-    </div>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
+
+    <button class="btn border-0" (click)="handleRightClick()">
+      <i class="bi bi-arrow-right-circle"></i>
+    </button>
   </div>
 </div>

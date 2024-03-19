@@ -1,0 +1,19 @@
+.mt-navbar-height {
+  padding-top: 66px;
+}
+
+.carousel-content {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  z-index: 20;
+  color: #ec5858;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+span {
+  font-family: "EB Garamond", serif;
+  font-size: 5rem;
+}

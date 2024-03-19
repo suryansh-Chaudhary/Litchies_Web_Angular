@@ -1,0 +1,12 @@
+.bi {
+  font-size: 1.5rem;
+}
+
+.navbar {
+  background-color: #ec5858;
+}
+
+a:hover,
+i:hover {
+  color: #ec5858;
+}
