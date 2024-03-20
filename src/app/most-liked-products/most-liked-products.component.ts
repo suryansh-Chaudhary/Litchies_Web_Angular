@@ -11,18 +11,16 @@ export class MostLikedProductsComponent {
 
   handleLeftClick() {
     if (this.currentPosition > 0) {
-      this.currentPosition -= 100; // Adjust slide amount based on your content width
+      this.currentPosition -= 150; // Adjust slide amount based on your content width
       this.slideContent();
     }
   }
 
   handleRightClick() {
-    // if (this.currentPosition < this.maxPosition) {
-    //   this.currentPosition += 100; // Adjust slide amount based on your content width
-    //   this.slideContent();
-    // }
-    this.currentPosition += 100; // Adjust slide amount based on your content width
-    this.slideContent();
+    if (this.currentPosition <= this.maxPosition) {
+      this.currentPosition += 150; // Adjust slide amount based on your content width
+      this.slideContent();
+    }
   }
 
   // Function to slide the content
@@ -31,7 +29,6 @@ export class MostLikedProductsComponent {
       '.product-container'
     ) as HTMLDivElement;
     if (contentElement) {
-      // contentElement.style.transform = `translateX(${this.currentPosition}px)`;
       contentElement.scrollTo({
         left: this.currentPosition,
         behavior: 'smooth',
@@ -41,9 +38,13 @@ export class MostLikedProductsComponent {
 
   ngOnInit() {
     // Calculate maximum allowed position based on content width
-    const contentWidth = document.querySelector('.card')?.clientWidth || 0;
+    const cards = document.querySelectorAll('.card');
+    let contentWidth = 0;
+    for (let card of Array.from(cards)) {
+      contentWidth += card.clientWidth;
+    }
     const containerWidth =
       document.querySelector('.product-container')?.clientWidth || 0;
-    this.maxPosition = Math.max(0, contentWidth - containerWidth); // Prevent exceeding container width
+    this.maxPosition = Math.max(contentWidth, containerWidth); // Prevent exceeding container width
   }
 }

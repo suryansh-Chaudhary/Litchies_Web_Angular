@@ -9,17 +9,29 @@ import { HomeComponent } from './Home/home/home.component';
 import { MostLikedProductsComponent } from './most-liked-products/most-liked-products.component';
 import { TrendingCategoriesComponent } from './trending-categories/trending-categories.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { TrendingShopsComponent } from './trending-shops/trending-shops.component';
 
 @NgModule({
   declarations: [
-    AppComponent, NavBarComponent, HomeComponent, MostLikedProductsComponent, TrendingCategoriesComponent, FooterComponent
+    AppComponent,
+    NavBarComponent,
+    HomeComponent,
+    MostLikedProductsComponent,
+    TrendingCategoriesComponent,
+    FooterComponent,
+    TrendingShopsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,11 +1,17 @@
 .outer-container {
-  background-color: #ec5858;
+  background-color: #000000;
 }
 
 span {
   color: #fff;
+  font-size: 1rem;
 }
 
-img {
-  background-color: #fff;
+h3 {
+  font-size: 2rem;
+  color: #fff;
 }
+
+/* img {
+  background-color: #fff;
+} */

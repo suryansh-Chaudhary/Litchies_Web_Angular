@@ -21,9 +21,12 @@
           </p>
         </div>
       </div>
-      <div class="carousel-item">
+      <div
+        class="carousel-item"
+        *ngFor="let banner of banners.data; let i = index"
+      >
         <img
-          src="assets/Images/carousel-2.jpg"
+          [src]="banner.shopBanner"
           class="d-block w-100"
           style="height: 60vh"
           alt="Not Found"
@@ -57,12 +60,16 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <div class="container-fluid p-0">
+  <div class="container-lg p-0">
     <app-most-liked-products></app-most-liked-products>
   </div>
 
-  <div class="container-fluid p-0">
+  <div class="container-lg p-0">
     <app-trending-categories></app-trending-categories>
+  </div>
+
+  <div class="container-lg p-0">
+    <app-trending-shops></app-trending-shops>
   </div>
 
   <div class="container-fluid p-0">
