@@ -1,0 +1,61 @@
+.outer-container {
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.outer-container::-webkit-scrollbar {
+  display: none;
+}
+
+.shop-bg-img {
+  height: 35vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+h3 {
+  font-family: "Amita", serif;
+  font-size: clamp(12px, 1.2vw, 24px);
+}
+
+p {
+  font-family: "Amita", serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.shop-bg-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.shop-info {
+  height: 50vh;
+  width: 100vw;
+}
+
+.shop-info .container-logo {
+  height: fit-content;
+  width: 80%;
+}
+
+.container-logo img {
+  height: 100%;
+  width: 15%;
+  min-width: 8rem;
+  display: block;
+  margin: -8% auto 0;
+}
+
+.follow-btn {
+  background-color: #ec5858;
+  color: #fff;
+}
+
+.btn {
+  min-width: 100px;
+}
+
+.card {
+  width: 16rem;
+}

@@ -27,7 +27,10 @@
           <p class="card-text">
             {{ shop.name }}
           </p>
-          <a href="#" class="btn btn-primary"
+          <a
+            href="#"
+            class="btn btn-primary"
+            (click)="sendDataToParticularShop(shop._id)"
             >Shop <i class="bi bi-arrow-right"></i
           ></a>
         </div>

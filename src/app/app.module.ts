@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TrendingShopsComponent } from './trending-shops/trending-shops.component';
+import { ShopListComponent } from './shops/shop-list/shop-list.component';
+import { ShopsComponent } from './shops/particular-shop/shops.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { TrendingShopsComponent } from './trending-shops/trending-shops.componen
     TrendingCategoriesComponent,
     FooterComponent,
     TrendingShopsComponent,
+    ShopsComponent,
+    ShopListComponent,
   ],
   imports: [
     BrowserModule,

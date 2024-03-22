@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ShopServiceService } from '../Service/shop-service.service';
+import { CommunicationService } from '../Service/communication.service';
 
 @Component({
   selector: 'app-trending-shops',
@@ -10,10 +11,17 @@ export class TrendingShopsComponent {
   shops: any = [];
   currentPosition = 0;
   maxPosition = 0;
-  constructor(private _shopService: ShopServiceService) {
+  constructor(
+    private _shopService: ShopServiceService,
+    private _communicationService: CommunicationService
+  ) {
     _shopService.getShopsForLandingPage().subscribe((res) => {
       this.shops = res;
     });
+  }
+
+  sendDataToParticularShop(data: any) {
+    this._communicationService.sendData(data);
   }
 
   handleLeftClick() {

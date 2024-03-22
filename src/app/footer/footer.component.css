@@ -5,11 +5,13 @@
 span {
   color: #fff;
   font-size: 1rem;
+  font-family: "Bad Script", cursive;
 }
 
 h3 {
   font-size: 2rem;
   color: #fff;
+  font-family: "Amita", serif;
 }
 
 /* img {
