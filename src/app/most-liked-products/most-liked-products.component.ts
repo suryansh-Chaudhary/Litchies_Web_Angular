@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ShopServiceService } from '../Service/shop-service.service';
 
 @Component({
   selector: 'app-most-liked-products',
@@ -8,6 +9,13 @@ import { Component } from '@angular/core';
 export class MostLikedProductsComponent {
   currentPosition = 0;
   maxPosition = 0;
+  products: any = [];
+
+  constructor(private _shopService: ShopServiceService) {
+    _shopService.getProducts('66014a81288cbd86c7c6b4dd').subscribe((res) => {
+      this.products = res;
+    });
+  }
 
   handleLeftClick() {
     if (this.currentPosition > 0) {

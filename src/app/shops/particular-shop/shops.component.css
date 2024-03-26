@@ -10,6 +10,7 @@
 .shop-bg-img {
   height: 35vh;
   width: 100vw;
+  margin-top: 5rem;
   overflow: hidden;
 }
 
@@ -34,11 +35,6 @@ p {
   width: 100vw;
 }
 
-.shop-info .container-logo {
-  height: fit-content;
-  width: 80%;
-}
-
 .container-logo img {
   height: 100%;
   width: 15%;
@@ -58,4 +54,10 @@ p {
 
 .card {
   width: 16rem;
+}
+
+@media screen and (max-width: 767px) {
+  .shop-bg-img {
+    height: 20vh;
+  }
 }

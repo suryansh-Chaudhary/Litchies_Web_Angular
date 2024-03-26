@@ -14,4 +14,16 @@ export class ShopServiceService {
       responseType: 'json',
     });
   }
+
+  getProducts(shopId: any) {
+    return this._http.get(this.baseUrl + `product/?id=${shopId}`, {
+      responseType: 'json',
+    });
+  }
+
+  getShopInfo(shopId: any) {
+    return this._http.get(this.baseUrl + `shops/${shopId}`, {
+      responseType: 'json',
+    });
+  }
 }

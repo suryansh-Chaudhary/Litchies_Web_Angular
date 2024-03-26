@@ -9,8 +9,5 @@ export class CommunicationService {
 
   dataChangedEvent = new EventEmitter<any>();
 
-  sendData(data: any) {
-    alert(data);
-    this.shopId = data;
-  }
+  sendData(data: any) {}
 }

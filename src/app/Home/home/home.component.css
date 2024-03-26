@@ -1,5 +1,5 @@
 .mt-navbar-height {
-  padding-top: 66px;
+  padding-top: 12vh;
 }
 
 .carousel-content {
@@ -16,4 +16,7 @@
 span {
   font-family: "EB Garamond", serif;
   font-size: 5rem;
+}
+
+@media screen and (max-height: "665px") {
 }

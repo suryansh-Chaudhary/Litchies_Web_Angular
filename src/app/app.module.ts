@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TrendingShopsComponent } from './trending-shops/trending-shops.component';
 import { ShopListComponent } from './shops/shop-list/shop-list.component';
 import { ShopsComponent } from './shops/particular-shop/shops.component';
+import { AllProductsComponent } from './all-products/all-products.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ShopsComponent } from './shops/particular-shop/shops.component';
     TrendingShopsComponent,
     ShopsComponent,
     ShopListComponent,
+    AllProductsComponent,
   ],
   imports: [
     BrowserModule,

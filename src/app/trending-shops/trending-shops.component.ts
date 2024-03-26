@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShopServiceService } from '../Service/shop-service.service';
 import { CommunicationService } from '../Service/communication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trending-shops',
@@ -13,15 +14,12 @@ export class TrendingShopsComponent {
   maxPosition = 0;
   constructor(
     private _shopService: ShopServiceService,
-    private _communicationService: CommunicationService
+    private _communicationService: CommunicationService,
+    private _router: Router
   ) {
     _shopService.getShopsForLandingPage().subscribe((res) => {
       this.shops = res;
     });
-  }
-
-  sendDataToParticularShop(data: any) {
-    this._communicationService.sendData(data);
   }
 
   handleLeftClick() {
@@ -71,5 +69,9 @@ export class TrendingShopsComponent {
         behavior: 'smooth',
       });
     }
+  }
+
+  goToShop(id: any) {
+    this._router.navigate(['Shops', id]);
   }
 }

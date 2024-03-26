@@ -1,59 +1,63 @@
 <div class="container-fluid p-0 outer-container">
+  <!-- NAV BAR -->
+  <app-nav-bar></app-nav-bar>
   <div class="container-fluid p-0 shop-bg-img">
     <img src="assets/Images/background-img.jpg" alt="Not Found" />
   </div>
-  <div class="container-fluid p-0 shop-info">
-    <div class="container bg-light p-0 pb-3 container-logo">
-      <img
-        class="rounded-circle border"
-        src="assets/Images/Kamal Jewellers logo.jpeg"
-        alt="Not Found"
-      />
-      <div class="container p-0 bg-light container-shop-name">
-        <h3 class="text-center m-0" style="color: #ec5858">
-          SIMCO Computers System Since 1994
-        </h3>
+  <!-- <div class="container-fluid p-0 shop-info"> -->
+  <div
+    class="container-md bg-light p-0 pb-3 container-logo"
+    *ngFor="let shop of shopInfo.data"
+  >
+    <img
+      class="rounded-circle border"
+      src="assets/Images/Kamal Jewellers logo.jpeg"
+      alt="Not Found"
+    />
+    <div class="container p-0 bg-light container-shop-name">
+      <h3 class="text-center m-0" style="color: #ec5858">
+        {{ shop.name }}
+      </h3>
+    </div>
+    <div class="container p-0 bg-light container-shop-address">
+      <p class="text-center m-0">
+        {{ shop.address }}
+      </p>
+    </div>
+    <div class="container p-0 pt-2 bg-light d-flex flex-fill products-rating">
+      <div class="container">
+        <h3 class="text-center m-0">PRODUCTS</h3>
+        <h4 class="text-center m-0 fw-bold">19</h4>
       </div>
-      <div class="container p-0 bg-light container-shop-address">
-        <p class="text-center m-0">
-          G-116, near Hotel Metro, in front of Cafe Little Bites, Sanjay Palace,
-          Civil Lines, Agra
-        </p>
+      <div class="container">
+        <h3 class="text-center m-0">FOLLOWERS</h3>
+        <h4 class="text-center m-0 fw-bold">9</h4>
       </div>
-      <div class="container p-0 pt-2 bg-light d-flex flex-fill products-rating">
-        <div class="container">
-          <h3 class="text-center m-0">PRODUCTS</h3>
-          <h4 class="text-center m-0 fw-bold">19</h4>
-        </div>
-        <div class="container">
-          <h3 class="text-center m-0">FOLLOWERS</h3>
-          <h4 class="text-center m-0 fw-bold">9</h4>
-        </div>
-        <div class="container">
-          <h3 class="text-center m-0">RATING</h3>
-          <h4 class="text-center m-0 fw-bold">4.2</h4>
-        </div>
+      <div class="container">
+        <h3 class="text-center m-0">RATING</h3>
+        <h4 class="text-center m-0 fw-bold">4.2</h4>
       </div>
-      <div
-        class="container p-0 pt-2 bg-light d-flex flex-fill follow-contact-btns"
-      >
-        <div class="container text-center">
-          <button class="btn w-50 follow-btn">FOLLOW</button>
-        </div>
-        <div class="container text-center">
-          <button class="btn btn-secondary w-50">CONTACT NOW</button>
-        </div>
-        <div class="container text-center">
-          <button class="btn btn-secondary">
-            <i class="bi bi-geo-alt" style="font-size: 20px"></i>
-          </button>
-        </div>
+    </div>
+    <div
+      class="container p-0 pt-2 bg-light d-flex flex-fill follow-contact-btns"
+    >
+      <div class="container text-center">
+        <button class="btn w-50 follow-btn">FOLLOW</button>
+      </div>
+      <div class="container text-center">
+        <button class="btn btn-secondary w-50">CONTACT NOW</button>
+      </div>
+      <div class="container text-center">
+        <button class="btn btn-secondary">
+          <i class="bi bi-geo-alt" style="font-size: 20px"></i>
+        </button>
       </div>
     </div>
   </div>
+  <!-- </div> -->
 
   <!-- TABS FOR PRODUCTS, VIDEOS, AND OFFERS -->
-  <div class="container mt-3">
+  <div class="container">
     <!-- Nav tabs -->
     <ul class="nav nav-fill nav-tabs" role="tablist">
       <li class="nav-item">
@@ -92,84 +96,21 @@
     <div class="tab-content">
       <div id="products" class="container tab-pane active">
         <div class="row">
-          <div class="col-sm-3">
+          <div
+            class="col-sm-3"
+            *ngFor="let product of products.data; let i = index"
+          >
             <div class="card mt-2 mx-auto">
               <img
-                src="assets/Images/flower1.jpg"
-                style="height: 12rem; width: 15rem; margin: 0 auto"
+                [src]="product.imageURLs"
+                style="height: 14rem"
                 class="card-img-top"
                 alt="Not Found"
               />
               <div class="card-body">
-                <h5 class="card-title fs-6">Flower Bouquet</h5>
+                <h5 class="card-title fs-6">{{ product.name }}</h5>
                 <p class="card-text fw-bold">
-                  {{ "10.50" | currency : "INR" }}
-                </p>
-              </div>
-              <div class="card-body">
-                <a href="#" class="card-link"><i class="bi bi-cart"></i></a>
-                <a href="#" class="card-link float-end"
-                  ><i class="bi bi-heart"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="card mt-2 mx-auto">
-              <img
-                src="assets/Images/carousel-1.jpg"
-                style="height: 12rem; width: 15rem; margin: 0 auto"
-                class="card-img-top"
-                alt="Not Found"
-              />
-              <div class="card-body">
-                <h5 class="card-title fs-6">Flower Bouquet</h5>
-                <p class="card-text fw-bold">
-                  {{ "10.50" | currency : "INR" }}
-                </p>
-              </div>
-              <div class="card-body">
-                <a href="#" class="card-link"><i class="bi bi-cart"></i></a>
-                <a href="#" class="card-link float-end"
-                  ><i class="bi bi-heart"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="card mt-2 mx-auto">
-              <img
-                src="assets/Images/jacket.jpg"
-                style="height: 12rem; width: 15rem; margin: 0 auto"
-                class="card-img-top"
-                alt="Not Found"
-              />
-              <div class="card-body">
-                <h5 class="card-title fs-6">Flower Bouquet</h5>
-                <p class="card-text fw-bold">
-                  {{ "10.50" | currency : "INR" }}
-                </p>
-              </div>
-              <div class="card-body">
-                <a href="#" class="card-link"><i class="bi bi-cart"></i></a>
-                <a href="#" class="card-link float-end"
-                  ><i class="bi bi-heart"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="card mt-2 mx-auto">
-              <img
-                src="assets/Images/smart watch.png"
-                style="height: 12rem; width: 15rem; margin: 0 auto"
-                class="card-img-top"
-                alt="Not Found"
-              />
-              <div class="card-body">
-                <h5 class="card-title fs-6">Flower Bouquet</h5>
-                <p class="card-text fw-bold">
-                  {{ "10.50" | currency : "INR" }}
+                  {{ product.price | currency : "INR" }}
                 </p>
               </div>
               <div class="card-body">

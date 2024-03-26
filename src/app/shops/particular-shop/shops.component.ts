@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CommunicationService } from 'src/app/Service/communication.service';
+import { ActivatedRoute } from '@angular/router';
+import { ShopServiceService } from 'src/app/Service/shop-service.service';
 
 @Component({
   selector: 'app-shops',
@@ -7,12 +8,31 @@ import { CommunicationService } from 'src/app/Service/communication.service';
   styleUrls: ['./shops.component.css'],
 })
 export class ShopsComponent implements OnInit {
-  constructor(private _communicationService: CommunicationService) {
-    alert(_communicationService.shopId);
+  products: any = [];
+  shopInfo: any = [];
+  shopId: any = '';
+  shopName: any = 'hi';
+
+  constructor(
+    private _shopService: ShopServiceService,
+    private _route: ActivatedRoute
+  ) {
+    //Fetch Shop Details
+    this._shopService.getShopInfo(this.shopId).subscribe((res) => {
+      this.shopInfo = res;
+      // this.shopName = this.shopInfo.data.name;
+      // this.shopName = this.shopInfo.name;
+      // console.log(this.shopName);
+    });
   }
   ngOnInit() {
-    this._communicationService.dataChangedEvent.subscribe((data) => {
-      alert('Received data:' + data);
+    // Retrieve shop ID from the route parameters
+    this._route.paramMap.subscribe((params) => {
+      this.shopId = parseInt(params.get('id')!, 10); // Assuming 'id' is the parameter name
+      // Fetch All Products of the Shop
+      this._shopService.getProducts(this.shopId).subscribe((res) => {
+        this.products = res;
+      });
     });
   }
 }
