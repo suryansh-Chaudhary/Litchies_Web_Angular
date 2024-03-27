@@ -1,5 +1,23 @@
+.outer-container {
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.outer-container::-webkit-scrollbar {
+  display: none;
+}
+
 .mt-navbar-height {
   padding-top: 12vh;
+}
+
+.carousel-item {
+  height: 50vh;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  height: 100%;
 }
 
 .carousel-content {
@@ -18,5 +36,23 @@ span {
   font-size: 5rem;
 }
 
-@media screen and (max-height: "665px") {
+@media screen and (max-width: 767px) {
+  .carousel-item {
+    height: 30vh;
+  }
+
+  .carousel-content {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    z-index: 20;
+    color: #ec5858;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    font-size: 24px;
+    /* line-height: 3rem; */
+  }
+
+  .carousel-content span {
+    font-size: 1.5rem;
+  }
 }

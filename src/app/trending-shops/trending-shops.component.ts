@@ -23,51 +23,20 @@ export class TrendingShopsComponent {
   }
 
   handleLeftClick() {
-    // Calculate maximum allowed position based on content width
-    const cards = document.querySelectorAll('[id=card-shops]');
-    let contentWidth = 0;
-    for (let card of Array.from(cards)) {
-      contentWidth += card.clientWidth;
-    }
-
-    const containerWidth =
-      document.querySelector('.shop-container')?.clientWidth || 0;
-    this.maxPosition = Math.max(contentWidth, containerWidth); // Prevent exceeding container width
-
-    if (this.currentPosition > 0) {
-      this.currentPosition -= 150; // Adjust slide amount based on your content width
-      this.slideContent();
+    const container = document.querySelector('.shop-container');
+    if (window.innerWidth > 700) {
+      container!.scrollLeft -= 250;
+    } else {
+      container!.scrollLeft -= 100;
     }
   }
 
   handleRightClick() {
-    // Calculate maximum allowed position based on content width
-    const cards = document.querySelectorAll('[id=card-shops]');
-    let contentWidth = 0;
-    for (let card of Array.from(cards)) {
-      contentWidth += card.clientWidth;
-    }
-
-    const containerWidth =
-      document.querySelector('.shop-container')?.clientWidth || 0;
-    this.maxPosition = Math.max(contentWidth, containerWidth); // Prevent exceeding container width
-    let tempWidth = this.maxPosition - containerWidth / 2;
-    if (this.currentPosition < tempWidth) {
-      this.currentPosition += 150; // Adjust slide amount based on your content width
-      this.slideContent();
-    }
-  }
-
-  // Function to slide the content
-  slideContent() {
-    const contentElement = document.querySelector(
-      '.shop-container'
-    ) as HTMLDivElement;
-    if (contentElement) {
-      contentElement.scrollTo({
-        left: this.currentPosition,
-        behavior: 'smooth',
-      });
+    const container = document.querySelector('.shop-container');
+    if (window.innerWidth > 700) {
+      container!.scrollLeft += 250;
+    } else {
+      container!.scrollLeft += 100;
     }
   }
 

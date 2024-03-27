@@ -16,7 +16,7 @@
 
 h3 {
   font-family: "Amita", serif;
-  font-size: clamp(12px, 1.2vw, 24px);
+  font-size: clamp(16px, 1.2vw, 1.5vw);
 }
 
 p {
@@ -56,8 +56,24 @@ p {
   width: 16rem;
 }
 
+.bi {
+  font-size: 25px;
+}
+
 @media screen and (max-width: 767px) {
   .shop-bg-img {
     height: 20vh;
+  }
+
+  .container-logo img {
+    margin: -15% auto 0;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .btn {
+    font-size: smaller;
   }
 }

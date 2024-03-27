@@ -1,15 +1,11 @@
 h3 {
-  margin: 2rem auto;
+  margin: 10px auto;
+  padding: 2rem;
+  background-color: rgb(236, 236, 236);
   font-family: "EB Garamond", serif;
   font-size: 2rem;
   text-align: center;
-  /* background-color: lightgray; */
 }
-
-/* .outer-container {
-  max-width: 80vw;
-  margin: 0 auto;
-} */
 
 .bi {
   font-size: 1.5rem;

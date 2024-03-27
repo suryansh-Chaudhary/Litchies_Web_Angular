@@ -4,6 +4,8 @@ import { HomeComponent } from './Home/home/home.component';
 import { ShopListComponent } from './shops/shop-list/shop-list.component';
 import { ShopsComponent } from './shops/particular-shop/shops.component';
 import { AllProductsComponent } from './all-products/all-products.component';
+import { LoginRegisterComponent } from './login-register/login-register.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -23,12 +25,16 @@ const routes: Routes = [
     component: AllProductsComponent,
   },
   {
+    path: 'Login',
+    component: LoginRegisterComponent,
+  },
+  {
     path: '',
     component: HomeComponent,
   },
   {
     path: '**',
-    component: HomeComponent,
+    component: PageNotFoundComponent,
   },
 ];
 

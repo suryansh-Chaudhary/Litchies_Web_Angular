@@ -1,9 +1,16 @@
 h3 {
-  margin: 2rem auto;
+  margin: 10px auto;
+  padding: 2rem;
+  background-color: rgb(236, 236, 236);
   font-family: "EB Garamond", serif;
   font-size: 2rem;
   text-align: center;
   /* background-color: lightgray; */
+}
+
+.card img {
+  height: 222px;
+  width: 222px;
 }
 
 .card-title {

@@ -1,4 +1,4 @@
-<div class="container-lg outer-container">
+<div class="container-lg outer-container p-0">
   <div class="container p-0">
     <h3>MOST LIKED PRODUCTS</h3>
   </div>
@@ -19,7 +19,9 @@
         <img [src]="product.imageURLs" class="card-img-top" alt="Not Found" />
         <div class="card-body">
           <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text fw-bold">{{ "10.50" | currency : "INR" }}</p>
+          <p class="card-text fw-bold">
+            {{ product.price | currency : "INR" }}
+          </p>
         </div>
         <div class="card-body">
           <a href="#" class="card-link"><i class="bi bi-cart"></i></a>

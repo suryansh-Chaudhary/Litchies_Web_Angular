@@ -100,23 +100,23 @@
             class="col-sm-3"
             *ngFor="let product of products.data; let i = index"
           >
-            <div class="card mt-2 mx-auto">
+            <div class="card p-0 mt-2 mx-auto">
               <img
                 [src]="product.imageURLs"
                 style="height: 14rem"
                 class="card-img-top"
                 alt="Not Found"
               />
-              <div class="card-body">
+              <div class="card-body p-0 px-2">
                 <h5 class="card-title fs-6">{{ product.name }}</h5>
                 <p class="card-text fw-bold">
                   {{ product.price | currency : "INR" }}
                 </p>
               </div>
-              <div class="card-body">
-                <a href="#" class="card-link"><i class="bi bi-cart"></i></a>
+              <div class="card-body p-0 pt-2 px-2">
+                <a href="#" class="card-link"><i class="bi bi-heart"></i></a>
                 <a href="#" class="card-link float-end"
-                  ><i class="bi bi-heart"></i
+                  ><i class="bi bi-cart"></i
                 ></a>
               </div>
             </div>

@@ -15,6 +15,8 @@ import { TrendingShopsComponent } from './trending-shops/trending-shops.componen
 import { ShopListComponent } from './shops/shop-list/shop-list.component';
 import { ShopsComponent } from './shops/particular-shop/shops.component';
 import { AllProductsComponent } from './all-products/all-products.component';
+import { LoginRegisterComponent } from './login-register/login-register.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { AllProductsComponent } from './all-products/all-products.component';
     ShopsComponent,
     ShopListComponent,
     AllProductsComponent,
+    LoginRegisterComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
