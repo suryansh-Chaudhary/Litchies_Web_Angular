@@ -8,7 +8,17 @@
   display: none;
 }
 
+.inner-container {
+  margin: 8rem auto;
+  border-radius: 1rem;
+}
+
 .img-container img {
+  width: 40%;
+}
+
+.login-div {
+  padding: 48px auto;
 }
 
 .btn {
@@ -26,4 +36,25 @@
   background-color: white;
   color: #ec5858;
   border: 1.5px solid #ec5858;
+}
+
+.fw-bold:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.fw-bold:active {
+  opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .login-div {
+    padding: 2rem auto;
+  }
+
+  .inner-container {
+    margin: 10rem auto;
+    padding: 48px 0;
+  }
 }

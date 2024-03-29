@@ -17,6 +17,12 @@ import { ShopsComponent } from './shops/particular-shop/shops.component';
 import { AllProductsComponent } from './all-products/all-products.component';
 import { LoginRegisterComponent } from './login-register/login-register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginSuccessfullyComponent } from './SnackBar/login-successfully/login-successfully.component';
+import { LogOutSuccessfullyComponent } from './SnackBar/log-out-successfully/log-out-successfully.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { WishlistedProductsComponent } from './wishlisted-products/wishlisted-products.component';
+import { CartComponent } from './cart/cart.component';
+import { MessageBoxComponent } from './DialogBox/message-box/message-box.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +38,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AllProductsComponent,
     LoginRegisterComponent,
     PageNotFoundComponent,
+    LoginSuccessfullyComponent,
+    LogOutSuccessfullyComponent,
+    WishlistedProductsComponent,
+    CartComponent,
+    MessageBoxComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +52,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FormsModule,
     ReactiveFormsModule,
   ],
+  exports: [MatSnackBarModule],
   providers: [],
   bootstrap: [AppComponent],
 })

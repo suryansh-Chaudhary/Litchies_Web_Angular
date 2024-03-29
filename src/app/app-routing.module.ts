@@ -6,36 +6,24 @@ import { ShopsComponent } from './shops/particular-shop/shops.component';
 import { AllProductsComponent } from './all-products/all-products.component';
 import { LoginRegisterComponent } from './login-register/login-register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { authGuard } from './guards/auth.guard';
+import { WishlistedProductsComponent } from './wishlisted-products/wishlisted-products.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'Shops/:id', component: ShopsComponent },
+  { path: 'Shop List', component: ShopListComponent, canActivate: [authGuard] },
+  { path: 'Products', component: AllProductsComponent },
+  { path: 'Login', component: LoginRegisterComponent },
   {
-    path: 'home',
-    component: HomeComponent,
+    path: 'wishlist',
+    component: WishlistedProductsComponent,
+    canActivate: [authGuard],
   },
-  {
-    path: 'Shops/:id',
-    component: ShopsComponent,
-  },
-  {
-    path: 'Shop List',
-    component: ShopListComponent,
-  },
-  {
-    path: 'Products',
-    component: AllProductsComponent,
-  },
-  {
-    path: 'Login',
-    component: LoginRegisterComponent,
-  },
-  {
-    path: '',
-    component: HomeComponent,
-  },
-  {
-    path: '**',
-    component: PageNotFoundComponent,
-  },
+  { path: 'cart', component: CartComponent, canActivate: [authGuard] },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

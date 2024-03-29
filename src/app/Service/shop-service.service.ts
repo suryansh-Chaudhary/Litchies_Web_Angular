@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class ShopServiceService {
   constructor(private _http: HttpClient) {}
 
-  baseUrl = 'http://localhost:5000/';
+  baseUrl = 'http://api.litchies.com:5000/';
 
   getShopsForLandingPage() {
     return this._http.get(this.baseUrl + 'shops', {

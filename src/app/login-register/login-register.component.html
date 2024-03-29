@@ -1,18 +1,20 @@
 <div class="container-fluid p-0 outer-container">
   <app-nav-bar></app-nav-bar>
 
-  <div class="container-lg bg-light mt-5 pt-5">
+  <div class="container-lg bg-light py-5 inner-container">
     <div class="container-lg text-center img-container">
       <img src="assets/Images/litchies.png" alt="Not Found" />
     </div>
 
-    <div class="container-lg py-5">
+    <!-- This DIV will use when user wants to login Direclty -->
+    <div class="container-lg login-div" *ngIf="isLogin">
       <!-- Mobile Number -->
       <div class="text-center my-4">
         <input
           type="text"
           class="form-control form-control-sm w-50 mx-auto"
           placeholder="Mobile Number"
+          [formControl]="mobile"
         />
       </div>
       <!-- Password -->
@@ -21,11 +23,131 @@
           type="text"
           class="form-control form-control-sm w-50 mx-auto"
           placeholder="Password"
+          [formControl]="password"
         />
       </div>
       <!-- Login Button -->
       <div class="text-center my-2">
-        <button class="btn">Login</button>
+        <button class="btn" (click)="loginClick()">Login</button>
+      </div>
+      <!-- Forgot Password -->
+      <div class="text-center">
+        <h3 class="fw-bold" (click)="forgotPasswordTextClick()">
+          Forgot Password?
+        </h3>
+      </div>
+      <!-- Forgot Password -->
+      <div class="text-center">
+        <h3 (click)="registerTextClick()">
+          Don't have an Account? <span class="fw-bold">Register</span>
+        </h3>
+      </div>
+    </div>
+
+    <!-- This DIV will use when User Forgot his password -->
+    <div class="container-lg login-div" *ngIf="isForgotPass">
+      <!-- Mobile Number -->
+      <div class="text-center my-4">
+        <input
+          type="text"
+          class="form-control form-control-sm w-50 mx-auto"
+          placeholder="Mobile Number"
+          [formControl]="forgotMobile"
+        />
+      </div>
+      <!-- Login Button -->
+      <div class="text-center my-2">
+        <button class="btn" (click)="resetPasswordClick()">
+          Reset Password
+        </button>
+      </div>
+      <!-- Forgot Password -->
+      <div class="text-center">
+        <h3 (click)="loginTextClick()">
+          Do you have account? <span class="fw-bold">Login</span>
+        </h3>
+      </div>
+      <!-- Forgot Password -->
+      <div class="text-center">
+        <h3 (click)="registerTextClick()">
+          Don't have an Account? <span class="fw-bold">Register</span>
+        </h3>
+      </div>
+    </div>
+
+    <!-- This DIV will use when user Wants to register himself -->
+    <div class="container-lg login-div" *ngIf="isRegister">
+      <!-- First Name -->
+      <div class="text-center my-4">
+        <input
+          type="text"
+          class="form-control form-control-sm w-50 mx-auto"
+          placeholder="First Name"
+          [formControl]="registerFirstName"
+        />
+      </div>
+      <!-- Last Name -->
+      <div class="text-center my-4">
+        <input
+          type="text"
+          class="form-control form-control-sm w-50 mx-auto"
+          placeholder="Last Name"
+          [formControl]="registerLastName"
+        />
+      </div>
+      <!-- Date of Birth -->
+      <div class="text-center my-4">
+        <input
+          type="text"
+          class="form-control form-control-sm w-50 mx-auto"
+          placeholder="DOB"
+          [formControl]="registerDob"
+        />
+      </div>
+      <!-- Mail Id -->
+      <div class="text-center my-4">
+        <input
+          type="text"
+          class="form-control form-control-sm w-50 mx-auto"
+          placeholder="E-Mail"
+          [formControl]="registerMail"
+        />
+      </div>
+      <!-- Gender Selection -->
+      <div class="text-center my-4">
+        <h5>Gender</h5>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            id="male"
+            value="male"
+            name="gender"
+            [formControl]="registerGender"
+          />
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            id="female"
+            value="female"
+            name="gender"
+            [formControl]="registerGender"
+          />
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+      </div>
+      <!-- Login Button -->
+      <div class="text-center my-2">
+        <button class="btn" (click)="getOtpClick()">Get OTP</button>
+      </div>
+      <!-- Forgot Password -->
+      <div class="text-center">
+        <h3 (click)="loginTextClick()">
+          Don you have an Account? <span class="fw-bold">Login</span>
+        </h3>
       </div>
     </div>
   </div>

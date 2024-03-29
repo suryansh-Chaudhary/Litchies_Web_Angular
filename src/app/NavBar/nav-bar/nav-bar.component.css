@@ -2,6 +2,10 @@
   font-size: 1.5rem;
 }
 
+.btn:active {
+  border: none;
+}
+
 .navbar {
   background-color: #ec5858;
 }

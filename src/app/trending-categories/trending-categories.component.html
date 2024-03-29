@@ -3,65 +3,32 @@
     <h3>TRENDING CATEGORIES</h3>
   </div>
 
-  <div class="container-fluid p-0 d-flex flex-row overflow-x-auto">
-    <figure class="figure px-3">
-      <img
-        src="assets/Images/category-jwellery.jpg"
-        class="figure-img img-fluid rounded"
-        alt="Not Found"
-        style="height: 10rem"
-      />
-      <figcaption class="figure-caption text-center fw-bold fs-5">
-        Jwellery
-      </figcaption>
-    </figure>
+  <div class="container-fluid p-0 d-flex flex-row">
+    <button class="btn border-0" (click)="handleLeftClick()">
+      <i class="bi bi-arrow-left-circle"></i>
+    </button>
 
-    <figure class="figure px-3">
-      <img
-        src="assets/Images/category-cloth-apparels.jpg"
-        class="figure-img img-fluid rounded"
-        alt="Not Found"
-        style="height: 10rem"
-      />
-      <figcaption class="figure-caption text-center fw-bold fs-5">
-        Cloths & Apparels
-      </figcaption>
-    </figure>
+    <div
+      class="container-fluid p-0 d-flex flex-row overflow-x-auto py-3 category-container"
+    >
+      <figure
+        class="figure px-3"
+        *ngFor="let category of categories.data; let i = index"
+      >
+        <img
+          [src]="category.image"
+          class="figure-img img-fluid rounded"
+          alt="Not Found"
+          style="height: 10rem"
+        />
+        <figcaption class="figure-caption text-center fw-bold fs-5">
+          {{ category.name }}
+        </figcaption>
+      </figure>
+    </div>
 
-    <figure class="figure px-3">
-      <img
-        src="assets/Images/category-electronics.jpg"
-        class="figure-img img-fluid rounded"
-        alt="Not Found"
-        style="height: 10rem"
-      />
-      <figcaption class="figure-caption text-center fw-bold fs-5">
-        Electronics
-      </figcaption>
-    </figure>
-
-    <figure class="figure px-3">
-      <img
-        src="assets/Images/category-gifts.jpg"
-        class="figure-img img-fluid rounded"
-        alt="Not Found"
-        style="height: 10rem"
-      />
-      <figcaption class="figure-caption text-center fw-bold fs-5">
-        Gifts
-      </figcaption>
-    </figure>
-
-    <figure class="figure px-3">
-      <img
-        src="assets/Images/category-flower-bouquet.jpg"
-        class="figure-img img-fluid rounded"
-        alt="Not Found"
-        style="height: 10rem"
-      />
-      <figcaption class="figure-caption text-center fw-bold fs-5">
-        Flower & Bouquet
-      </figcaption>
-    </figure>
+    <button class="btn border-0" (click)="handleRightClick()">
+      <i class="bi bi-arrow-right-circle"></i>
+    </button>
   </div>
 </div>

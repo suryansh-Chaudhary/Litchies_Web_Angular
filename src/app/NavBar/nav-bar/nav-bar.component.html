@@ -56,8 +56,16 @@
             placeholder="Search Products"
             aria-label="Search"
           />
-          <button class="btn"><i class="bi bi-heart"></i></button>
-          <button class="btn"><i class="bi bi-cart"></i></button>
+          <button class="btn" (click)="WishListIconClick()">
+            <i class="bi bi-heart"></i>
+          </button>
+          <button class="btn" (click)="CartIconClick()">
+            <i class="bi bi-cart"></i>
+          </button>
+          <button class="btn"><i class="bi bi-bell"></i></button>
+          <button class="btn" [routerLink]="['/Login']">
+            <i class="bi bi-person-circle"></i>
+          </button>
         </form>
       </div>
     </div>
