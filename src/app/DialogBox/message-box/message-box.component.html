@@ -1,1 +1,10 @@
-<p>message-box works!</p>
+<div class="container-fluid">
+  <h1 mat-dialog-title>{{ data.title }}</h1>
+    <div mat-dialog-content id="message">
+      <p>{{ data.message }}</p>
+    </div>
+    <div mat-dialog-actions class="d-flex">
+      <button class="btn btn-primary mx-1 flex-fill" mat-button (click)="onNoClick()">Close</button>
+      <button class="btn btn-secondary mx-1 flex-fill" mat-button (click)="onNoClick()">Ok</button>
+    </div>
+</div>

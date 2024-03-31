@@ -1,4 +1,4 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable, EventEmitter, Output } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -9,5 +9,7 @@ export class CommunicationService {
 
   dataChangedEvent = new EventEmitter<any>();
 
-  sendData(data: any) {}
+  sendData() {
+    this.dataChangedEvent.emit();
+  }
 }

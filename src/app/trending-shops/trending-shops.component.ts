@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ShopServiceService } from '../Service/shop-service.service';
-import { CommunicationService } from '../Service/communication.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +13,6 @@ export class TrendingShopsComponent {
   maxPosition = 0;
   constructor(
     private _shopService: ShopServiceService,
-    private _communicationService: CommunicationService,
     private _router: Router
   ) {
     _shopService.getShopsForLandingPage().subscribe((res) => {

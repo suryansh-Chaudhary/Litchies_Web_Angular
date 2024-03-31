@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommunicationService } from 'src/app/Service/communication.service';
 import { ShopServiceService } from 'src/app/Service/shop-service.service';
 
 @Component({

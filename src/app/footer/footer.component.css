@@ -1,5 +1,10 @@
 .outer-container {
   background-color: #000000;
+  padding: 0 48px ;
+}
+
+.row{
+  margin: 48px 0;
 }
 
 span {
@@ -14,6 +19,21 @@ h3 {
   font-family: "Amita", serif;
 }
 
-/* img {
-  background-color: #fff;
-} */
+@media screen and (max-width: 767px) {
+  .outer-container{
+    padding: 0;
+  }
+
+  h3{
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  .col-sm-4:nth-child(2), .col-sm-4:nth-child(3){
+    margin-top: 1rem;
+  }
+
+  .row{
+    margin: 10px auto;
+  }
+}

@@ -5,6 +5,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { LoginSuccessfullyComponent } from '../SnackBar/login-successfully/login-successfully.component';
 import { Router } from '@angular/router';
 import * as jwt_decode from 'jwt-decode';
+import { MatDialog } from '@angular/material/dialog';
+import { MessageBoxComponent } from '../DialogBox/message-box/message-box.component';
+import { CommunicationService } from '../Service/communication.service';
 
 @Component({
   selector: 'app-login-register',
@@ -17,7 +20,9 @@ export class LoginRegisterComponent {
   constructor(
     private _authService: AuthServiceService,
     private _snackBar: MatSnackBar,
-    private _router: Router
+    private _router: Router,
+    private _dialog: MatDialog,
+    private _commService: CommunicationService
   ) {}
 
   openSnackBar() {
@@ -55,8 +60,27 @@ export class LoginRegisterComponent {
               this.loginCredentials.data
             );
             this._router.navigateByUrl('home');
-            this.openSnackBar();
-          }
+            // this.openSnackBar();
+            
+            const dialogData: MessageBoxComponent['data'] = {
+              title: 'Congratulations!!',
+              message: `You've Successfully LoggedIn`
+            };
+        
+            const dialogRef = this._dialog.open(MessageBoxComponent, {
+              data: dialogData
+            });
+            this._commService.sendData();
+          }          
+        },(error) => {
+            const dialogData: MessageBoxComponent['data'] = {
+              title: 'Error!!',
+              message: `Correct Username or Password`
+            };
+        
+            const dialogRef = this._dialog.open(MessageBoxComponent, {
+              data: dialogData
+            });
         });
     }
   }

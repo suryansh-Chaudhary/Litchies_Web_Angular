@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { MessageBoxComponent } from 'src/app/DialogBox/message-box/message-box.component';
+import { CommunicationService } from 'src/app/Service/communication.service';
 import { ShopServiceService } from 'src/app/Service/shop-service.service';
 
 @Component({
@@ -7,15 +10,25 @@ import { ShopServiceService } from 'src/app/Service/shop-service.service';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css'],
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit{
   shops: any = [];
+  showLogOutBtn: boolean = false;
 
   constructor(
     private _shopService: ShopServiceService,
-    private _router: Router
+    private _router: Router,
+    private _dialog: MatDialog,
+    private _commService: CommunicationService,
+    private cdr: ChangeDetectorRef
   ) {
     _shopService.getShopsForLandingPage().subscribe((res) => {
       this.shops = res;
+    });
+  }
+
+  ngOnInit(): void {
+    this._commService.dataChangedEvent.subscribe(res => {
+      this.emitFunctionToChangeLoginClick();
     });
   }
 
@@ -41,5 +54,29 @@ export class NavBarComponent {
     } else {
       this._router.navigateByUrl('cart');
     }
+  }
+
+  // LogOut Function
+  logOutClick(){
+    localStorage.removeItem("access_token");
+
+    const dialogData: MessageBoxComponent['data'] = {
+      title: 'Congratulations!!',
+      message: `Successfully Logged Out`
+    };
+
+    const dialogRef = this._dialog.open(MessageBoxComponent, {
+      data: dialogData
+    });
+
+    dialogRef.afterClosed().subscribe(res => {
+      this._router.navigateByUrl('/home');
+    })
+  }
+
+  // This function will call when User successfully login to the application and
+  // its a time to show logout icon onthe navbar
+  emitFunctionToChangeLoginClick(){
+    this.showLogOutBtn = true;
   }
 }

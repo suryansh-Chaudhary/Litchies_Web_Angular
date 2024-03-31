@@ -1,0 +1,22 @@
+.container-fluid{
+    padding: 2vw;
+    width: '35vw';
+    height: '15vw';
+}
+
+h1{
+    text-align: center;
+    color: #ec5858;
+}
+
+#message{
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .container-fluid{
+        width: 65vw;
+        height: 40vw;
+    }
+    
+}

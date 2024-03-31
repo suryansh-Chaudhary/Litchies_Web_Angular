@@ -20,6 +20,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginSuccessfullyComponent } from './SnackBar/login-successfully/login-successfully.component';
 import { LogOutSuccessfullyComponent } from './SnackBar/log-out-successfully/log-out-successfully.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
 import { WishlistedProductsComponent } from './wishlisted-products/wishlisted-products.component';
 import { CartComponent } from './cart/cart.component';
 import { MessageBoxComponent } from './DialogBox/message-box/message-box.component';
@@ -52,7 +53,7 @@ import { MessageBoxComponent } from './DialogBox/message-box/message-box.compone
     FormsModule,
     ReactiveFormsModule,
   ],
-  exports: [MatSnackBarModule],
+  exports: [MatSnackBarModule, MatDialogModule],
   providers: [],
   bootstrap: [AppComponent],
 })

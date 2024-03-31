@@ -22,7 +22,7 @@ const routes: Routes = [
     canActivate: [authGuard],
   },
   { path: 'cart', component: CartComponent, canActivate: [authGuard] },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 

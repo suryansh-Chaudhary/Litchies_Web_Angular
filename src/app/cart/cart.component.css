@@ -18,9 +18,9 @@
   margin: 0 auto;
 }
 
-/* .card img {
-  height: 100%;
-} */
+.card-body span{
+  font-size: 1rem;
+}
 
 .product-name {
   font-weight: bold;
@@ -41,13 +41,27 @@
 
 .btn {
   padding: 6px;
-  background-color: rgb(231, 229, 229);
-  border: rgb(71, 71, 71);
+  border: 1px solid rgb(167, 163, 163);
   margin: auto 2px;
 }
-/* 
+
 @media screen and (max-width: 767px) {
-  .card.body {
-    padding: 6px;
+  /* .row-flex{
+    display: flex;
+    flex-direction: row;
   }
-} */
+
+  .img-container{
+    width: fit-content;
+  }
+
+  .img-container img{
+    width: 66px;
+    height: 66px;
+  }
+
+  .card-body .btn{
+    padding: 0;
+    height: 2.5rem;
+  } */
+}

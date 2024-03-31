@@ -11,7 +11,6 @@ export class TrendingCategoriesComponent {
   constructor(private _categoryService: ProductsServiceService) {
     _categoryService.getCategories().subscribe((res) => {
       this.categories = res;
-      console.log(this.categories);
     });
   }
 
