@@ -1,7 +1,9 @@
-.outer-container{
+.outer-container {
   user-select: none;
+  margin-top: 5rem;
 }
-  h3 {
+
+h3 {
   margin: 10px auto;
   padding: 2rem;
   background-color: rgb(236, 236, 236);
@@ -9,7 +11,7 @@
   font-size: 2rem;
   text-align: center;
 }
-.category-container{
+.category-container {
   overflow: hidden;
   transition: transform 0.5s ease-in-out;
 }
@@ -24,11 +26,11 @@
   cursor: pointer;
 }
 
-.card:hover{
+.card:hover {
   opacity: 0.8;
 }
 
-.card:active{
+.card:active {
   opacity: 1;
 }
 
@@ -42,8 +44,28 @@
 }
 
 @media screen and (max-width: 767px) {
-  h3{
+  h3 {
     font-size: 1.8rem;
     padding: 1.5rem;
+  }
+
+  .category-container {
+    width: 100vw;
+    overflow-x: scroll;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  button {
+    display: none;
+  }
+
+  .card {
+    margin: 0 3%;
+    min-width: 44%;
+  }
+
+  .card img {
+    height: 100%;
+    width: 100%;
   }
 }

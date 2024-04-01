@@ -31,8 +31,27 @@ h3 {
 }
 
 @media screen and (max-width: 767px) {
-  h3{
+  h3 {
     font-size: 1.8rem;
     padding: 1.5rem;
+  }
+
+  .product-container {
+    width: 100vw;
+    overflow-x: auto;
+  }
+
+  button {
+    display: none;
+  }
+
+  .card {
+    margin: 0 3%;
+    min-width: 44%;
+  }
+
+  .card img {
+    height: 100%;
+    width: 100%;
   }
 }

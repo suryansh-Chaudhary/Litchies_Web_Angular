@@ -16,7 +16,7 @@ export class ShopServiceService {
   }
 
   getProducts(shopId: any) {
-    return this._http.get(this.baseUrl + `product/?id=${shopId}`, {
+    return this._http.get(this.baseUrl + `product/${shopId}/shop`, {
       responseType: 'json',
     });
   }

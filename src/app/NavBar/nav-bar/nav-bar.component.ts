@@ -10,7 +10,7 @@ import { ShopServiceService } from 'src/app/Service/shop-service.service';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css'],
 })
-export class NavBarComponent implements OnInit{
+export class NavBarComponent implements OnInit {
   shops: any = [];
   showLogOutBtn: boolean = false;
 
@@ -27,7 +27,7 @@ export class NavBarComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this._commService.dataChangedEvent.subscribe(res => {
+    this._commService.dataChangedEvent.subscribe((res) => {
       this.emitFunctionToChangeLoginClick();
     });
   }
@@ -57,26 +57,26 @@ export class NavBarComponent implements OnInit{
   }
 
   // LogOut Function
-  logOutClick(){
-    localStorage.removeItem("access_token");
+  logOutClick() {
+    localStorage.removeItem('access_token');
 
     const dialogData: MessageBoxComponent['data'] = {
       title: 'Congratulations!!',
-      message: `Successfully Logged Out`
+      message: `Successfully Logged Out`,
     };
 
     const dialogRef = this._dialog.open(MessageBoxComponent, {
-      data: dialogData
+      data: dialogData,
     });
 
-    dialogRef.afterClosed().subscribe(res => {
+    dialogRef.afterClosed().subscribe((res) => {
       this._router.navigateByUrl('/home');
-    })
+    });
   }
 
   // This function will call when User successfully login to the application and
   // its a time to show logout icon onthe navbar
-  emitFunctionToChangeLoginClick(){
+  emitFunctionToChangeLoginClick() {
     this.showLogOutBtn = true;
   }
 }

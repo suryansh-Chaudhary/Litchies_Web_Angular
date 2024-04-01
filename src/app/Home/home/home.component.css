@@ -8,10 +8,6 @@
   display: none;
 }
 
-.mt-navbar-height {
-  padding-top: 12vh;
-}
-
 .carousel-item {
   height: 50vh;
   overflow: hidden;

@@ -5,10 +5,7 @@
     <img src="assets/Images/background-img.jpg" alt="Not Found" />
   </div>
   <!-- <div class="container-fluid p-0 shop-info"> -->
-  <div
-    class="container-md bg-light p-0 pb-3 container-logo"
-    *ngFor="let shop of shopInfo.data"
-  >
+  <div class="container-md bg-light p-0 pb-3 container-logo">
     <img
       class="rounded-circle border"
       src="assets/Images/Kamal Jewellers logo.jpeg"
@@ -16,12 +13,12 @@
     />
     <div class="container p-0 bg-light container-shop-name">
       <h3 class="text-center m-0" style="color: #ec5858">
-        {{ shop.name }}
+        {{ shopName }}
       </h3>
     </div>
     <div class="container p-0 bg-light container-shop-address">
       <p class="text-center m-0">
-        {{ shop.address }}
+        {{ shopAddress }}
       </p>
     </div>
     <div class="container p-0 pt-2 bg-light d-flex flex-fill products-rating">

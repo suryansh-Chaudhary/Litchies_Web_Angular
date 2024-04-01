@@ -8,17 +8,14 @@
       <i class="bi bi-arrow-left-circle"></i>
     </button>
 
-    <div
-      class="container-fluid p-0 py-3 d-flex flex-row overflow-x-hidden shop-container"
-    >
+    <div class="container-fluid p-0 py-3 d-flex flex-row shop-container">
       <div
         class="card"
         id="card-shops"
-        style="width: 18rem"
         *ngFor="let shop of shops.data; let i = index"
       >
         <img
-          [src]="shop.shopImg"
+          [src]="shop.shopThumbnail"
           class="card-img-top"
           alt="not found"
           style="height: 10rem"

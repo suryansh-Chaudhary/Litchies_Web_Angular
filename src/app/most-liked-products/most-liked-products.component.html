@@ -8,15 +8,17 @@
       <i class="bi bi-arrow-left-circle"></i>
     </button>
 
-    <div
-      class="container-fluid p-0 py-3 d-flex flex-row overflow-x-hidden product-container"
-    >
+    <div class="container-fluid p-0 py-3 d-flex flex-row product-container">
       <div
         class="card"
         style="width: 18rem; height: 25rem"
         *ngFor="let product of products.data; let i = index"
       >
-        <img [src]="product.imageURLs" class="card-img-top" alt="Not Found" />
+        <img
+          [src]="product.thumbnailURL"
+          class="card-img-top"
+          alt="Not Found"
+        />
         <div class="card-body">
           <h5 class="card-title">{{ product.name }}</h5>
           <p class="card-text fw-bold">
