@@ -1,0 +1,88 @@
+.outer-container {
+  user-select: none;
+  margin-top: 5rem;
+}
+
+.category-container::-webkit-scrollbar {
+  display: none;
+}
+
+.category-container {
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card-title {
+  font-size: 1em;
+}
+
+.card {
+  margin: 0 1rem;
+  width: 18rem;
+  height: 18rem;
+  min-width: 14rem;
+  cursor: pointer;
+}
+
+.card:hover {
+  opacity: 0.8;
+}
+
+.card:active {
+  opacity: 1;
+}
+
+.card img {
+  height: 222px;
+  width: 222px;
+}
+
+.bi {
+  font-size: 1.5rem;
+}
+
+.float-end {
+  color: #ec5858;
+
+  > .bi {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .category-container {
+    width: 100vw;
+    overflow-x: scroll;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  button {
+    display: none;
+  }
+
+  .card {
+    margin: 0 1.2%;
+    padding: 4%;
+    min-width: 30.5%;
+    height: 8rem;
+  }
+
+  .card-body {
+    padding: 5px 2px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 5px;
+    margin: 2px 0 0 0;
+    line-height: 10px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .card img {
+    height: 80%;
+    width: 100%;
+  }
+}

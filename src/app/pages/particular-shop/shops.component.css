@@ -1,0 +1,129 @@
+.outer-container {
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.outer-container::-webkit-scrollbar {
+  display: none;
+}
+
+.shop-bg-img {
+  height: 35vh;
+  width: 100vw;
+  margin-top: 5rem;
+  overflow: hidden;
+}
+
+h3 {
+  font-family: "Amita", serif;
+  font-size: clamp(16px, 1.2vw, 1.5vw);
+}
+
+p {
+  font-family: "Amita", serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.shop-bg-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.shop-info {
+  height: 50vh;
+  width: 100vw;
+}
+
+.container-logo img {
+  height: 100%;
+  width: 15%;
+  min-width: 8rem;
+  display: block;
+  margin: -8% auto 0;
+}
+
+.follow-btn {
+  background-color: #ec5858;
+  color: #fff;
+}
+
+.card {
+  width: 16rem;
+}
+
+.card img {
+  height: 14rem;
+}
+
+.card-body {
+  padding-bottom: 5px;
+}
+
+.card-body .btn {
+  background-color: #ec5858;
+  color: white;
+  padding: 0 5px;
+}
+
+.card-body .bi {
+  font-size: 1rem;
+}
+
+.bi {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  .row {
+    width: 100vw;
+  }
+
+  .tab-container {
+    padding: 0;
+  }
+
+  .col-sm-3 {
+    width: 50%;
+    padding: 0;
+  }
+
+  .col-sm-3 .card {
+    width: 95%;
+    height: 15rem;
+  }
+
+  .col-sm-3 .card-body {
+    padding: 0;
+    font-size: 15px;
+  }
+
+  h5 {
+    margin: 2px 0 0 0;
+    line-height: 12.5px;
+  }
+
+  .shop-bg-img {
+    height: 20vh;
+  }
+
+  .container-logo img {
+    margin: -15% auto 0;
+  }
+
+  .btn {
+    font-size: smaller;
+  }
+
+  .follow-contact-btns .btn {
+    font-size: 10px;
+  }
+
+  .follow-contact-btns .bi {
+    font-size: 12px;
+  }
+
+  .card img {
+    height: 70%;
+  }
+}

@@ -1,0 +1,42 @@
+<div class="container-lg p-0">
+  <div class="container p-0">
+    <h3>POPULAR SHOPS</h3>
+  </div>
+
+  <div class="mt-6 px-4 sm:hidden">
+    <a
+      routerLink="/Shop List"
+      class="block text-sm font-semibold text-indigo-600 hover:text-indigo-500 float-end"
+    >
+      Browse all Shops
+      <i class="bi bi-arrow-right"></i>
+    </a>
+  </div>
+  <div class="container-fluid p-0 d-flex flex-row">
+    <button class="btn border-0" (click)="handleLeftClick()">
+      <i class="bi bi-arrow-left-circle"></i>
+    </button>
+
+    <div class="container-fluid p-0 py-3 d-flex flex-row shop-container">
+      <div
+        class="card"
+        id="card-shops"
+        *ngFor="let shop of shops.data; let i = index"
+      >
+        <img [src]="shop.shopThumbnail" class="card-img-top" alt="not found" />
+        <div class="card-body">
+          <p class="card-text">
+            {{ shop.name }}
+          </p>
+          <button class="btn" (click)="goToShop(shop._id)">
+            Shop <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn border-0" (click)="handleRightClick()">
+      <i class="bi bi-arrow-right-circle"></i>
+    </button>
+  </div>
+</div>

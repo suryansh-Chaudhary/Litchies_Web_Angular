@@ -1,0 +1,55 @@
+<div class="container-lg outer-container p-0">
+  <div class="container p-0">
+    <h3>MOST LIKED PRODUCTS</h3>
+  </div>
+
+  <div class="mt-6 px-4 sm:hidden">
+    <a
+      routerLink="/Products"
+      class="block text-sm font-semibold text-indigo-600 hover:text-indigo-500 float-end"
+    >
+      Browse all Products
+      <i class="bi bi-arrow-right"></i>
+    </a>
+  </div>
+  <div class="container-fluid p-0 d-flex flex-row">
+    <button class="btn border-0" (click)="handleLeftClick()">
+      <i class="bi bi-arrow-left-circle"></i>
+    </button>
+
+    <div class="container-fluid p-0 py-3 d-flex flex-row product-container">
+      <div class="card" *ngFor="let product of products.data; let i = index">
+        <img
+          [src]="product.thumbnailURL"
+          class="card-img-top"
+          alt="Not Found"
+        />
+        <div class="card-body">
+          <h5
+            class="card-title"
+            [style.white-space]="product.name.length > 25 ? 'nowrap' : 'normal'"
+          >
+            {{ product.name | slice : 0 : 25 }}
+            <span *ngIf="product.name.length > 25">...</span>
+          </h5>
+          <p class="card-text fw-bold">&#8377; {{ product.price }}</p>
+          <!--&#8377; is used to show ruppee icon-->
+        </div>
+        <div class="card-body d-flex flex-row justify-content-around p-0">
+          <div class="flex-fill bd-highlight text-center">
+            <button class="btn">
+              <img src="assets/Images/litchies_cart_logo.png" />
+            </button>
+          </div>
+          <div class="flex-fill bd-highlight text-start">
+            <button class="btn"><i class="bi bi-heart"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn border-0" (click)="handleRightClick()">
+      <i class="bi bi-arrow-right-circle"></i>
+    </button>
+  </div>
+</div>

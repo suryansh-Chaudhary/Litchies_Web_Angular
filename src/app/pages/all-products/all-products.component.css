@@ -1,0 +1,81 @@
+.outer-container {
+  overflow-x: hidden;
+  height: 100vh;
+  user-select: none;
+}
+
+.outer-container::-webkit-scrollbar {
+  display: none;
+}
+
+h5 {
+  font-family: "EB Garamond", serif;
+  font-size: 1rem;
+}
+
+.row {
+  margin-top: 5rem;
+  padding: 2rem 2rem;
+}
+
+.action-btns img {
+  height: 15px;
+}
+
+#action-icons {
+  height: 25px;
+}
+
+.card img {
+  height: 50vh;
+}
+
+.action-btns {
+  cursor: pointer;
+}
+
+.action-btns:hover {
+  opacity: 0.5;
+}
+
+.action-btns:active {
+  opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .row {
+    width: 100vw;
+    padding: 1rem 0 0 0;
+    margin: 5rem 0 0 0;
+  }
+
+  .col-md-3 {
+    background-color: lightcyan;
+    padding: 0 1%;
+    width: 50%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card-body {
+    padding: 0 2px;
+  }
+
+  .card img {
+    height: 25vh;
+  }
+
+  h5 {
+    font-size: 12px;
+  }
+
+  #action-icons {
+    height: 15px;
+  }
+
+  .action-btns-container {
+    padding: 0;
+  }
+}

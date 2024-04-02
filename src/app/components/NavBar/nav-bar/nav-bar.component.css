@@ -1,0 +1,27 @@
+.bi {
+  font-size: 1.5rem;
+}
+
+.btn:active {
+  border: none;
+}
+
+.navbar {
+  background-color: #ec5858;
+}
+
+a:hover,
+i:hover {
+  color: #ec5858;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-nav > li:not(:first-child) {
+    /* Hide all list items except the first */
+    display: none;
+  }
+  .navbar-nav > li.active {
+    /* Optionally show the active item as well */
+    display: block;
+  }
+}
