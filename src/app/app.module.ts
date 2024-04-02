@@ -26,6 +26,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { MessageBoxComponent } from './components/DialogBox/message-box/message-box.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { ProductComponent } from './pages/product/product.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ProductComponent } from './pages/product/product.component';
     MessageBoxComponent,
     CategoriesComponent,
     ProductComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

@@ -63,14 +63,15 @@ export class LoginRegisterComponent {
               this._router.navigateByUrl('home');
               // this.openSnackBar();
 
-              const dialogData: MessageBoxComponent['data'] = {
-                title: 'Congratulations!!',
-                message: `You've Successfully LoggedIn`,
-              };
+              // const dialogData: MessageBoxComponent['data'] = {
+              //   title: 'Congratulations!!',
+              //   message: `You've Successfully LoggedIn`,
+              // };
 
-              const dialogRef = this._dialog.open(MessageBoxComponent, {
-                data: dialogData,
-              });
+              // const dialogRef = this._dialog.open(MessageBoxComponent, {
+              //   data: dialogData,
+              // });
+              alert('LoggedIn!!');
               this._commService.sendData();
             }
           },
