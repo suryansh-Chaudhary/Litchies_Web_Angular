@@ -1,1 +1,149 @@
-<p>profile works!</p>
+<div class="container-fluid outer-container">
+  <app-nav-bar></app-nav-bar>
+
+  <div class="container-fluid p-0">
+    <div class="row row-cols-1">
+      <div class="col d-flex mx-auto col-info">
+        <div class="text-center">
+          <span class="rounded-circle">
+            <img class="rounded-circle" src="assets/Images/profileImage.png" />
+          </span>
+        </div>
+        <div class="flex-grow-1 px-3">
+          <h2 class="m-0 d-block">
+            {{ userInfo.firstName + " " + userInfo.lastName }}
+          </h2>
+          <div class="d-block">
+            <i class="bi bi-telephone"></i>
+            <span>{{ userInfo.mobile }}</span>
+          </div>
+          <div class="d-block">
+            <i class="bi bi-envelope"></i>
+            <span>{{ userInfo.email }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mx-auto col-actions">
+        <div class="d-inline">
+          <i class="bi">
+            <img src="assets/Images/myFollowedStoresIcon.png" alt="" />
+          </i>
+        </div>
+        <div class="d-inline flex-grow-1 px-3">
+          <a
+            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+            routerLink="/Profile"
+            >My Followed Stores</a
+          >
+        </div>
+      </div>
+
+      <div class="col mx-auto col-actions">
+        <div class="d-inline">
+          <i class="bi">
+            <img src="assets/Images/myLikedProductsIcon.png" alt="" />
+          </i>
+        </div>
+        <div class="d-inline flex-grow-1 px-3">
+          <a
+            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+            routerLink="/Profile"
+            >My Liked Products</a
+          >
+        </div>
+      </div>
+
+      <div class="col mx-auto col-actions">
+        <div class="d-inline">
+          <i class="bi">
+            <img src="assets/Images/myOrdersIcon.png" alt="" />
+          </i>
+        </div>
+        <div class="d-inline flex-grow-1 px-3">
+          <a
+            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+            routerLink="/Profile"
+            >My Orders</a
+          >
+        </div>
+      </div>
+
+      <div class="col mx-auto col-actions">
+        <div class="d-inline">
+          <i class="bi">
+            <img src="assets/Images/wishlistIcon.png" alt="" />
+          </i>
+        </div>
+        <div class="d-inline flex-grow-1 px-3">
+          <a
+            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+            routerLink="/Profile"
+            >Wishlist</a
+          >
+        </div>
+      </div>
+
+      <div class="col mx-auto col-actions">
+        <div class="d-inline">
+          <i class="bi">
+            <img src="assets/Images/shareIcon.png" alt="" />
+          </i>
+        </div>
+        <div class="d-inline flex-grow-1 px-3">
+          <a
+            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+            routerLink="/Profile"
+            >Shares</a
+          >
+        </div>
+      </div>
+
+      <div class="col mx-auto col-actions">
+        <div class="d-inline">
+          <i class="bi">
+            <img src="assets/Images/helpCenterIcon.png" alt="" />
+          </i>
+        </div>
+        <div class="d-inline flex-grow-1 px-3">
+          <a
+            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+            routerLink="/Profile"
+            >Help Center</a
+          >
+        </div>
+      </div>
+
+      <div class="col mx-auto col-actions">
+        <div class="d-inline">
+          <i class="bi">
+            <img src="assets/Images/feedbackIcon.png" alt="" />
+          </i>
+        </div>
+        <div class="d-inline flex-grow-1 px-3">
+          <a
+            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+            routerLink="/Profile"
+            >Feedback</a
+          >
+        </div>
+      </div>
+
+      <div class="col mx-auto col-actions">
+        <div class="d-inline">
+          <i class="bi">
+            <img src="assets/Images/logOutIcon.png" alt="" />
+          </i>
+        </div>
+        <div class="d-inline flex-grow-1 px-3">
+          <a
+            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+            href="/home"
+            (click)="logOutClick()"
+            >Logout</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

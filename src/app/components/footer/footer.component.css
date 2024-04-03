@@ -14,7 +14,7 @@ span {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1rem;
   color: black;
   font-family: "Roboto", sans-serif;
 }
@@ -24,6 +24,16 @@ h3 {
   color: #ec5858;
   border: 1px solid #ec5858;
 }
+
+a {
+  margin-left: 0.5rem;
+  color: black;
+}
+
+#span input {
+  margin-left: 50%;
+}
+
 @media screen and (max-width: 767px) {
   .outer-container {
     padding: 0;
@@ -49,6 +59,18 @@ h3 {
 
   .content1 {
     padding: 0;
+  }
+
+  .content1 button {
+    font-size: 10px;
+    height: 25px;
+    padding: 0 2px;
+  }
+
+  .content1 input {
+    font-size: 10px;
+    height: 25px;
+    padding: 0 2px;
   }
 
   .address-header {

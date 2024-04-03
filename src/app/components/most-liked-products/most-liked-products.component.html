@@ -23,6 +23,7 @@
           [src]="product.thumbnailURL"
           class="card-img-top"
           alt="Not Found"
+          (click)="productClick(product._id)"
         />
         <div class="card-body">
           <h5
@@ -42,7 +43,9 @@
             </button>
           </div>
           <div class="flex-fill bd-highlight text-start">
-            <button class="btn"><i class="bi bi-heart"></i></button>
+            <button class="btn pt-2 mx-2">
+              <i class="bi bi-heart"></i>
+            </button>
           </div>
         </div>
       </div>

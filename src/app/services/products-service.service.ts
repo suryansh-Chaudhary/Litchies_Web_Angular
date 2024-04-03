@@ -15,6 +15,13 @@ export class ProductsServiceService {
     });
   }
 
+  // Getting Particular Product using Product ID
+  getProductById(productId: any) {
+    return this._http.get(this.baseUrl + `product/${productId}`, {
+      responseType: 'json',
+    });
+  }
+
   // Getting all the Product Categories
   getCategories() {
     return this._http.get(this.baseUrl + 'productCategory', {

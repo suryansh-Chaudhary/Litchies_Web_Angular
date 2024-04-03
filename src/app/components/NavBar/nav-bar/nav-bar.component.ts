@@ -58,22 +58,15 @@ export class NavBarComponent implements OnInit {
     }
   }
 
-  // LogOut Function
-  logOutClick() {
-    localStorage.removeItem('access_token');
-
-    const dialogData: MessageBoxComponent['data'] = {
-      title: 'Congratulations!!',
-      message: `Successfully Logged Out`,
-    };
-
-    const dialogRef = this._dialog.open(MessageBoxComponent, {
-      data: dialogData,
-    });
-
-    dialogRef.afterClosed().subscribe((res) => {
-      this._router.navigateByUrl('/home');
-    });
+  // Person Icon Click
+  personIconClick() {
+    const token = localStorage.getItem('access_token');
+    // Check if token exists and is not null or empty
+    if (!token || token.trim() === '') {
+      this._router.navigateByUrl('Login');
+    } else {
+      this._router.navigateByUrl('Profile');
+    }
   }
 
   // This function will call when User successfully login to the application and

@@ -11,6 +11,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { ProductComponent } from './pages/product/product.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'Products', component: AllProductsComponent },
   { path: 'product/:id', component: ProductComponent },
   { path: 'Login', component: LoginRegisterComponent },
+  { path: 'Profile', component: ProfileComponent },
   {
     path: 'wishlist',
     component: WishlistedProductsComponent,

@@ -5,7 +5,7 @@
 h3 {
   margin: 10px auto;
   padding: 2rem;
-  background-color: #f7c5c5;
+  background-color: #f6dcdc;
   color: white;
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
@@ -54,6 +54,7 @@ h5 {
 .card img {
   height: 60%;
   width: 100%;
+  cursor: pointer;
 }
 
 .float-end {

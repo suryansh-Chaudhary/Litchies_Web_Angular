@@ -1,1 +1,90 @@
-<p>product works!</p>
+<div class="container-fluid outer-container">
+  <app-nav-bar></app-nav-bar>
+
+  <div class="container-fluid product-container">
+    <div class="img-container">
+      <img [src]="productDetails.data.thumbnailURL" alt="" />
+    </div>
+
+    <div class="action-btns-container d-flex">
+      <div class="flex-fill text-center">
+        <i class="bi"><img src="assets/Images/like-icon.png" /></i>
+        21.3K Likes
+      </div>
+      <div class="flex-fill text-center">
+        <i class="bi"><img src="assets/Images/wishlist-icon.png" /></i>
+        Wishlist
+      </div>
+      <div class="flex-fill text-center">
+        <i class="bi"><img src="assets/Images/enquiry-icon.png" /></i>
+        Enquiry
+      </div>
+      <div class="flex-fill text-center">
+        <i class="bi"><img src="assets/Images/share-icon.png" /></i>
+        Share
+      </div>
+    </div>
+
+    <div class="description-container">
+      <div class="d-flex">
+        <div class="flex-fill px-2">
+          <h4 class="fw-bold m-0">{{ productDetails.data.name }}</h4>
+        </div>
+        <div class="flex-fill text-end px-2">
+          <h4 class="fw-bold m-0">&#8377;{{ productDetails.data.price }}</h4>
+        </div>
+      </div>
+      <div class="product-description fw-light px-2">
+        <span>{{ productDetails.data.desc }}</span>
+      </div>
+    </div>
+
+    <div class="container-fluid shop-details-container">
+      <div class="d-flex flex-row justify-content-around">
+        <span
+          class="rounded-circle span1"
+          style="
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            padding-top: 20px;
+            background-color: lightgray;
+          "
+        >
+          Rating <br />
+          4.1
+        </span>
+        <span
+          class="rounded-circle span2"
+          style="
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            padding-top: 20px;
+            background-color: lightgray;
+          "
+        >
+          <img
+            [src]="shopDetails.data.shopThumbnail"
+            height="50"
+            class="rounded-circle"
+          />
+        </span>
+        <span class="rounded-pill text-center">
+          <span class="d-block">Sold By</span>
+          <span class="d-block">{{ shopDetails.data.name }}</span>
+          <span
+            class="d-block"
+            [style.white-space]="
+              shopDetails.data.address.length > 25 ? 'nowrap' : 'normal'
+            "
+            >{{ shopDetails.data.address | slice : 0 : 25
+            }}<span *ngIf="shopDetails.data.address.length > 25"
+              >...</span
+            ></span
+          >
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

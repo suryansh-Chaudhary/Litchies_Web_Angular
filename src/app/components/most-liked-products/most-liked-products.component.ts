@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ShopServiceService } from 'src/app/services/shop-service.service';
 
 @Component({
@@ -9,7 +10,10 @@ import { ShopServiceService } from 'src/app/services/shop-service.service';
 export class MostLikedProductsComponent {
   products: any = [];
 
-  constructor(private _shopService: ShopServiceService) {
+  constructor(
+    private _shopService: ShopServiceService,
+    private _router: Router
+  ) {
     _shopService.getProducts('66014a81288cbd86c7c6b4dd').subscribe((res) => {
       this.products = res;
     });
@@ -31,5 +35,9 @@ export class MostLikedProductsComponent {
     } else {
       container!.scrollLeft += 100;
     }
+  }
+
+  productClick(productId: any) {
+    this._router.navigate(['product', productId]);
   }
 }

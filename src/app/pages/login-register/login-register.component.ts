@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import * as jwt_decode from 'jwt-decode';
 import { MatDialog } from '@angular/material/dialog';
 import { AuthServiceService } from 'src/app/services/auth-service.service';
 import { CommunicationService } from 'src/app/services/communication.service';
@@ -24,12 +23,6 @@ export class LoginRegisterComponent {
     private _dialog: MatDialog,
     private _commService: CommunicationService
   ) {}
-
-  openSnackBar() {
-    this._snackBar.openFromComponent(LoginSuccessfullyComponent, {
-      duration: this.durationInSeconds * 1000,
-    });
-  }
 
   mobile = new FormControl('');
   password = new FormControl('');
@@ -57,11 +50,9 @@ export class LoginRegisterComponent {
             if (res) {
               this.loginCredentials = res;
               localStorage.setItem('access_token', this.loginCredentials.data);
-              const decodedToken = jwt_decode.jwtDecode(
-                this.loginCredentials.data
-              );
               this._router.navigateByUrl('home');
-              // this.openSnackBar();
+
+              localStorage.setItem('user_info', this.loginCredentials.data);
 
               // const dialogData: MessageBoxComponent['data'] = {
               //   title: 'Congratulations!!',

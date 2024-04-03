@@ -1,0 +1,68 @@
+.outer-container {
+  padding: 6rem 0 0 0;
+  background-color: #f0f5f5;
+  height: 100vh;
+}
+
+.outer-container::-webkit-scrollbar {
+  display: none;
+}
+
+.row {
+  width: 80vw;
+  margin: 0 auto;
+  border-radius: 5vw;
+  background-color: white;
+}
+
+.rounded-circle img {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  font-weight: bold;
+  color: black;
+}
+
+.d-inline .bi {
+  color: #ec0f0f;
+  font-size: 1.5rem;
+}
+
+.col-info {
+  height: 10vw;
+  width: 75%;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.col-actions {
+  height: 2.5vw;
+  width: 75%;
+  padding: 10px 0 0 10px;
+}
+
+.bi-telephone,
+.bi-envelope {
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .row {
+    width: 95vw;
+    margin: 0 auto;
+    border-radius: 3vw;
+  }
+  .col-info {
+    height: 22vw;
+    width: 90%;
+    padding: 1vw;
+  }
+
+  .col-actions {
+    height: 10vw;
+    width: 90%;
+    padding: 2vw 0 0 4vw;
+  }
+}
